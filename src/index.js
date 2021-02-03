@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import BurgerStacker from './BurgerStacker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BurgerStacker />
   </React.StrictMode>,
   document.getElementById('root')
 );
