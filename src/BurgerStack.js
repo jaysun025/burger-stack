@@ -6,7 +6,9 @@ class BurgerStack extends Component {
 // call .map on our past props array and render 
 // an ingredient component for each item.
 let burgerIngredients = this.props.burgerIngredients.reverse().map((item, index) => (
-    <Ingredient ingredient={item} key={`keyB${index}`} />
+    <li>
+        <Ingredient ingredient={item} key={`keyB${index}`} />
+    </li>
 ))
         return (
             <ul>
