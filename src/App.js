@@ -26,7 +26,15 @@ class App extends Component{
 
     addToBurger = (e) => {
         let currentBurger = this.state.burgerIngredients
-        currentBurger.push(e.target.innerText)
+        // craete an object with name and color properties that collect vals from 
+        // e.target
+        let newIngredient = {name: e.target.innerText, color: e.target.style.backgroundColor}
+        // push object to current burger array
+        currentBurger.push(newIngredient)
+        // set state of burger ingredients to currentBurger
+
+
+       
 
         this.setState({
             burgerIngredients: currentBurger
