@@ -41,7 +41,7 @@ class App extends Component{
 
     render() {
         return (
-            <div>
+            <div style={{display: 'flex'}}>
                 <IngredientList ingredients={ingredients} addToBurger={this.addToBurger} />
                 <BurgerPane burgerIngredients={this.state.burgerIngredients} clearBurger={this.clearBurger} />
             </div>
