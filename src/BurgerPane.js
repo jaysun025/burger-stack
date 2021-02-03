@@ -1,11 +1,18 @@
+import React, { Component } from 'react'
+import BurgerStack from './BurgerStack'
+import ClearBurger from './ClearBurger'
 
+class BurgerPane extends Component {
+// handle passed in props and state vals and functions
 
-let BurgerPane = (props) => {
+  render() {
     return (
-        <div>
-          <h1>Burger Pains</h1>
-        </div>
+      <div>
+        <BurgerStack burgerIngredients={this.props.burgerIngredients} />
+        <ClearBurger />
+      </div>
     )
+  }
 }
 
 export default BurgerPane
