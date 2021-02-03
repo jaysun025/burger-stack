@@ -2,11 +2,13 @@ import './App.css';
 import IngredientList from './components/IngredientList'
 import React, { Component } from 'react'
 import BurgerPane from './BurgerPane'
+import ClearBurger from './components/ClearBurger'
 
 class BurgerStacker extends Component{
   constructor() {
     super()
-  this.state =  { ingredients: [ 
+  this.state =  { 
+    ingredients: [ 
     {name: 'Kaiser Bun', color: 'saddlebrown'},
     {name: 'Sesame Bun', color: 'sandybrown'},
     {name: 'Gluten Free Bun', color: 'peru'},
@@ -19,7 +21,8 @@ class BurgerStacker extends Component{
     {name: 'Tomato', color: 'tomato'},
     {name: 'Bacon', color: 'maroon'},
     {name: 'Onion', color: 'lightyellow'}
-  ]
+  ],
+  burgerArray: []
 }
 
 this.addFood = () => {
@@ -27,8 +30,10 @@ this.addFood = () => {
   tempFood.push(this.state.newFood)
 }
 
-this.clearFood = () => {
-  this.setState({ingredArray: []})
+this.clearFood = (e) => {
+  e.preventDefault()
+  console.log('clicked')
+  this.setState({burgerArray: []})
 }
 
   }
@@ -36,8 +41,8 @@ this.clearFood = () => {
   return (
     <form>
       <BurgerPane />
+      <ClearBurger clearFood={this.clearFood}/>
       <IngredientList ingredients={this.state.ingredients} />
-      <button onClick={this.clearfood}>Clear Burger</button>
     </form>
   )
 }

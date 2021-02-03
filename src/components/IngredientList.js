@@ -4,7 +4,12 @@ let IngredientList = (props) => {
     return (
         <div>
         {props.ingredients.map((ingredient) => {
-          return  <p>{ingredient.name}</p>
+          return (
+              <div>
+              <p>{ingredient.name}</p>
+              <button>Add</button>
+              </div>
+          )
         })}
         </div>
     )
