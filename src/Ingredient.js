@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
-class Ingredient extends Component {
-    render () {
+export default function(props) {
+    
         return (
-            <p style= {{backgroundColor: this.props.color}} key= {this.props.key}>
-                {this.props.ingredient}
+            <p style= {{backgroundColor: props.color}} key= {props.key}>
+                {props.ingredient}
             </p>
         )
     }
-}
 
-export default Ingredient
+
