@@ -25,8 +25,9 @@ function App() {
 
       
 
-    const addToBurger = (e) => {
-        setIngredientList(ingredientList.name, ingredientList.color)
+    const addToBurger = (item) => {
+        console.log('add to burger')
+        setBurgerStack(burgerStack.concat(item))
     }
 
     const clearBurger = (e) => {

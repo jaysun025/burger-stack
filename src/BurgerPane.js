@@ -6,7 +6,7 @@ export default function(props)  {
 // handle passed in props and state vals and functions
   return (
       <div>
-        <BurgerStack burgerIngredients={props.burgerIngredients} />
+        <BurgerStack burgerStack={props.burgerStack} />
         <ClearBurger clearBurger={props.clearBurger}/>
       </div>
     )
